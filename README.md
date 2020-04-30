@@ -5,19 +5,19 @@
 
 このコンテナは以下で構成しています。  
 - OS：Ubuntu:18.04
- - 日本語入力環境対応（Mozc）
- - sudo権限付きuser作成済み（ID：my-ubuntu、PASS：my-Password）
+  - 日本語入力環境対応（Mozc）
+  - sudo権限付きuser作成済み（ID：my-ubuntu、PASS：my-Password）
 - デスクトップ環境：Xfce
- - xfce4-goodiesインストール済み
- - gitやnanoエディタ等の基本ツールをインストール済み
+  - xfce4-goodiesインストール済み
+  - gitやnanoエディタ等の基本ツールをインストール済み
 - リモートデスクトップサーバー：Xrdp
- - リモート越しの双方向のclipborad共有に対応
- - マルチディスプレイに対応
- - rootログイン拒否設定済み
+  - リモート越しの双方向のclipborad共有に対応
+  - マルチディスプレイに対応
+  - rootログイン拒否設定済み
 - SSHサーバー：openssh-server
- - 公開鍵設定済み（秘密鍵は[こちら](https://github.com/Rosyuku/ubuntu-rdp/blob/master/config/ssh/.ssh/id_rsa)）
- - パスワードログイン拒否設定済み
- - rootログイン拒否設定済み
+  - 公開鍵設定済み（秘密鍵は[こちら](https://github.com/Rosyuku/ubuntu-rdp/blob/master/config/ssh/.ssh/id_rsa)）
+  - パスワードログイン拒否設定済み
+  - rootログイン拒否設定済み
 
 ユーザ名等の設定を変更する場合は、[設定ファイル](https://github.com/Rosyuku/ubuntu-rdp/blob/master/.env)を書き換えてDocker-composeし直していただくのが簡単です。
 
