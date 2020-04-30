@@ -1,0 +1,11 @@
+.nofail
+.fail
+load-module module-augment-properties
+load-module module-always-sink
+.ifexists /usr/lib/pulse-11.1/modules/module-xrdp-sink.so
+load-module /usr/lib/pulse-11.1/modules/module-xrdp-sink.so
+.endif
+.ifexists /usr/lib/pulse-11.1/modules/module-xrdp-source.so
+load-module /usr/lib/pulse-11.1/modules/module-xrdp-source.so
+.endif
+load-module module-native-protocol-unix

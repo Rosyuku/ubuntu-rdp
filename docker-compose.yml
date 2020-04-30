@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+    ubuntu-desktop:
+      build: 
+        context: .
+        args:
+          - root_password=$root_password
+          - user_name=$user_name
+          - user_password=$user_password
+          - host_name=$host_name
+      container_name: $container_name
+      hostname: $host_name
+      shm_size: $shm_size
+      tty: true
+      ports: 
+        - $RDPport:3389 #RDP
+        - $SSHport:22 #SSH
+      command:
+        bash -c '/usr/bin/supervisord -c /etc/supervisor/supervisord.conf'
+      volumes: 
+        - ./workdir:/home/$user_name/Workdir/:rw
