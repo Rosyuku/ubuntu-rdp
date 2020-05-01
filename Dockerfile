@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 LABEL maintainer="KW_Rosyuku (https://twitter.com/KW_Rosyuku)"
-LABEL version="0.1.0"
+LABEL version="0.1.1"
 LABEL discription="リモートデスクトップ接続とSSH接続が可能なUbuntu:18.04のコンテナです。"
 
 ARG host_name="Challenger"
@@ -50,13 +50,12 @@ RUN apt-get update && \
     apt-get install -y supervisor
 ADD ./config/supervisord/* /etc/supervisor/conf.d/
 
-#Install Preferred package and Clean up
+#Install Preferred package
 RUN apt-get update && \
     apt-get install -y \
-    git tig nano \
+    git tig gedit nano \
     wget curl net-tools firefox\
-    build-essential software-properties-common && \
-    echo "include /usr/share/nano/sh.nanorc" >> /home/$user_name/.nanorc
+    build-essential software-properties-common
 
 # Clean up
 RUN apt-get clean && apt-get autoremove && \
