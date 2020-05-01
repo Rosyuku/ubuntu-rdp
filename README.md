@@ -62,6 +62,8 @@ shm_size=256m                  #一時ファイル領域
 RDPport=33890                  #リモートデスクトップ接続のport
 SSHport=22000                  #SSH接続のport
 ```
+リモートデスクトップやSSHの設定は[config内](https://github.com/Rosyuku/ubuntu-rdp/tree/master/config)の設定ファイルを変更してください。
+
 最後に以下等のコマンドでビルドします。
 ```
 Docker-compose up --build
