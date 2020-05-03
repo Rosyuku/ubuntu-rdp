@@ -25,7 +25,7 @@
 imageをpullしてご利用いただく場合、以下のコマンドで実行できます。  
 （以下の例では13389portでリモートデスクトップ接続、10022portでSSH接続が可能です。ポートはお好きに変更いただいて構いません。）
 ```
-docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m rosyuku/ubuntu-rdp:latest
+docker run --rm -it -p 13389:3389 -p 10022:22 --shm-size=256m rosyuku/ubuntu-rdp:0.1.1
 ```
 
 ### リモートデスクトップ接続
