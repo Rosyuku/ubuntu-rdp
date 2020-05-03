@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 LABEL maintainer="KW_Rosyuku (https://twitter.com/KW_Rosyuku)"
-LABEL version="0.1.1"
+LABEL version="0.1.2"
 LABEL discription="リモートデスクトップ接続とSSH接続が可能なUbuntu:18.04のコンテナです。"
 
 ARG host_name="Challenger"
